@@ -1,0 +1,45 @@
+ion-label {
+  font-family: "Roboto-regular";
+  &.regular {
+    font-size: var(--text-boby-regular);
+    line-height: 140%;
+  }
+  &.regular-larger {
+    font-size: var(--text-boby-regular-larger);
+    line-height: 140%;
+  }
+  &.semibold {
+    font-size: var(---text-body-semibold);
+    line-height: 140%;
+  }
+
+  &.headline-smaller {
+    font-size: var(--text-headline-smaller);
+    line-height: auto;
+  }
+  &.headline-small {
+    font-size: var(--text-headline-small);
+    line-height: 140%;
+  }
+  &.headline-medium {
+    font-size: var(--text-headline-medium);
+    line-height: auto;
+  }
+  &.headline-large {
+    font-size: var(--text-headline-large);
+    line-height: auto;
+  }
+  &.headline-larger {
+    font-size: var(--text-headline-larger);
+    line-height: 120%;
+  }
+  &.caption {
+    font-size: var(--text-caption-regular);
+    line-height: 135%;
+  }
+  &.caption-semibold {
+    font-size: var(--text-caption-semibold);
+    line-height: auto;
+  }
+
+}

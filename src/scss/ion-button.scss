@@ -1,0 +1,68 @@
+ion-button {
+  font-family: "Roboto-regular";
+  font-size: var(--text-button-semibold);
+  line-height: auto;
+  --border-radius: 8px !important;
+  --border-style: solid;
+  --border-width: 1px !important;
+  --box-shadow: none !important;
+  text-transform: none;
+  max-width: 80%;
+
+  &.btn-primary {
+    --background: var(--ion-color-primary) !important;
+    --background-activated: var(--ion-color-primary-shade) !important;
+    --background-activated-opacity: 0.9 !important;
+    --background-focused: var(--ion-color-primary-shade) !important;
+    --background-focused-opacity: 0.9 !important;
+    --background-hover: var(--ion-color-primary-shade) !important;
+    --background-hover-opacity: 0.9 !important;
+    --border-color: var(--ion-color-primary-tint) !important;
+    --color: var(--ion-color-light) !important;
+    --color-activated: var(--ion-color-light-shade) !important;
+    --color-focused: var(--ion-color-light-shade) !important;
+    --color-hover: var(--ion-color-light-shade) !important;
+    --ripple-color: var(--ion-color-primary-shade) !important;
+    &:active {
+      --box-shadow: 1px 1px 1px 1px var(--ion-color-primary-shade) !important;
+    }
+  }
+
+  &.btn-outline {
+    --background: transparent !important;
+    --background-activated: transparent !important;
+    --background-activated-opacity: 0.9 !important;
+    --background-focused: transparent !important;
+    --background-focused-opacity: 0.9 !important;
+    --background-hover: transparent !important;
+    --background-hover-opacity: 0.9 !important;
+    --border-color: var(--ion-color-primary-tint) !important;
+    --color: var(--ion-color-primary) !important;
+    --color-activated: var(--ion-color-primary-shade) !important;
+    --color-focused: var(--ion-color-primary-shade) !important;
+    --color-hover: var(--ion-color-primary-shade) !important;
+    --ripple-color: transparent !important;
+    &:active {
+      --box-shadow: 1px 1px 1px 1px var(--ion-color-primary-shade) !important;
+    }
+  }
+  &.btn-text-only {
+    width: fit-content !important;
+    --background: transparent !important;
+    --background-activated: transparent !important;
+    --background-activated-opacity: 0.9 !important;
+    --background-focused: transparent !important;
+    --background-focused-opacity: 0.9 !important;
+    --background-hover: transparent !important;
+    --background-hover-opacity: 0.9 !important;
+    --border-color: transparent !important;
+    --color: var(--ion-color-primary) !important;
+    --color-activated: var(--ion-color-primary-shade) !important;
+    --color-focused: var(--ion-color-primary-shade) !important;
+    --color-hover: var(--ion-color-primary-shade) !important;
+    --ripple-color: transparent !important;
+  }
+  &.btn-icon-only {
+    width: fit-content !important;
+  }
+}
