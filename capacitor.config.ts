@@ -1,8 +1,8 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'ionic-template',
+  appId: 'com.hungtd.ionictemplate',
+  appName: 'Ionic Template',
   webDir: 'www',
   bundledWebRuntime: false
 };

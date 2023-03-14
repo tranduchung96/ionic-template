@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button ></ion-menu-button>
+    </ion-buttons>
+    <ion-title>App Launcher</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button (click)="openFacebook()">
+    <ion-icon slot="start" name="logo-facebook"></ion-icon>
+    Open Facebook
+  </ion-button>
+  <ion-button (click)="openZalo()">
+    <ion-icon slot="start" name="logo-facebook"></ion-icon>
+    Open Zalo
+  </ion-button>
+  <ion-item>
+    <ion-input [(ngModel)]="url" type="text" placeholder="App package id"></ion-input>
+    <ion-button (click)="opeApp()" expand="block" fill="clear" shape="round">
+      Open app
+    </ion-button>
+  </ion-item>
+</ion-content>

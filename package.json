@@ -1,15 +1,18 @@
 {
   "name": "ionic-template",
   "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "https://ionicframework.com/",
+  "author": "hungtd",
+  "homepage": "https://github.com/tranduchung96",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "copy:android": "ionic cap copy android",
+    "cap:sync": "npx cap sync",
+    "postinstall": "npm run cap:sync"
   },
   "private": true,
   "dependencies": {
@@ -19,13 +22,19 @@
     "@angular/platform-browser": "^15.0.0",
     "@angular/platform-browser-dynamic": "^15.0.0",
     "@angular/router": "^15.0.0",
+    "@capacitor/android": "4.7.0",
     "@capacitor/app": "4.1.1",
+    "@capacitor/app-launcher": "^4.1.0",
+    "@capacitor/browser": "^4.1.1",
+    "@capacitor/camera": "^4.1.4",
     "@capacitor/core": "4.7.0",
     "@capacitor/haptics": "4.1.0",
     "@capacitor/keyboard": "4.1.1",
     "@capacitor/status-bar": "4.1.1",
     "@ionic/angular": "^6.1.9",
+    "bootstrap": "^5.2.3",
     "ionicons": "^6.0.3",
+    "lodash": "^4.17.21",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
@@ -44,10 +53,10 @@
     "@capacitor/cli": "4.7.0",
     "@ionic/angular-toolkit": "^8.0.0",
     "@types/jasmine": "~4.0.0",
+    "@types/lodash": "^4.14.191",
     "@types/node": "^12.11.1",
     "@typescript-eslint/eslint-plugin": "5.3.0",
     "@typescript-eslint/parser": "5.3.0",
-    "bootstrap": "^5.2.3",
     "eslint": "^7.6.0",
     "eslint-plugin-import": "2.22.1",
     "eslint-plugin-jsdoc": "30.7.6",
@@ -63,5 +72,5 @@
     "ts-node": "~8.3.0",
     "typescript": "~4.8.4"
   },
-  "description": "An Ionic project"
+  "description": "An Ionic template"
 }

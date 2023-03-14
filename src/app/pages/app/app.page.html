@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>App</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button (click)="exitApp()" expand="block" fill="clear" shape="round">
+    exitApp
+  </ion-button>
+  <ion-button (click)="getInfo()" expand="block" fill="clear" shape="round">
+    getInfo
+  </ion-button>
+  <ion-button (click)="getState()" expand="block" fill="clear" shape="round">
+    getState
+  </ion-button>
+  <ion-button
+    (click)="getLaunchUrl()"
+    expand="block"
+    fill="clear"
+    shape="round"
+  >
+    getLaunchUrl
+  </ion-button>
+  <ion-button (click)="minimizeApp()" expand="block" fill="clear" shape="round">
+    minimizeApp
+  </ion-button>
+</ion-content>

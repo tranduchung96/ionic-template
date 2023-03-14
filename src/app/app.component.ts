@@ -1,18 +1,35 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, Optional } from '@angular/core';
+import { App } from '@capacitor/app';
+import { IonRouterOutlet, Platform } from '@ionic/angular';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   public appPages = [
-    { title: 'Inbox', url: '/folder/Inbox', icon: 'mail' },
-    { title: 'Outbox', url: '/folder/Outbox', icon: 'paper-plane' },
-    { title: 'Favorites', url: '/folder/Favorites', icon: 'heart' },
-    { title: 'Archived', url: '/folder/Archived', icon: 'archive' },
-    { title: 'Trash', url: '/folder/Trash', icon: 'trash' },
-    { title: 'Spam', url: '/folder/Spam', icon: 'warning' },
+    { title: 'Home', url: '/home', icon: 'home' },
+    { title: 'Camera', url: '/camera', icon: 'camera' },
+    { title: 'App Launcher', url: '/app-launcher', icon: 'arrow-redo' },
+    { title: 'App', url: '/app', icon: 'apps' },
+    { title: 'Browser', url: '/browser', icon: 'browsers' },
+    { title: 'Iframe', url: '/iframe', icon: 'browsers' },
+
   ];
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
-  constructor() {}
+  constructor(
+    private platform: Platform,
+    @Optional() private routerOutlet: IonRouterOutlet
+  ) { }
+  ngOnInit(): void {
+    this.platform.backButton.subscribeWithPriority(-1, () => {
+      if (!this.routerOutlet.canGoBack()) {
+        App.minimizeApp();
+      }
+    });
+    this.platform.backButton.subscribeWithPriority(10, () => {
+      console.log('Handler was called!');
+    });
+  }
+
+
 }

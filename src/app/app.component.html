@@ -1,6 +1,16 @@
 <ion-app>
   <ion-split-pane contentId="main-content">
     <ion-menu contentId="main-content" type="overlay">
+      <ion-list>
+        <ng-container *ngFor="let page of appPages">
+          <ion-menu-toggle>
+            <ion-item [routerLink]="page.url">
+              <ion-icon slot="start" [name]="page.icon"></ion-icon>
+              <ion-label>{{ page.title }}</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ng-container>
+      </ion-list>
     </ion-menu>
     <ion-router-outlet id="main-content"></ion-router-outlet>
   </ion-split-pane>
