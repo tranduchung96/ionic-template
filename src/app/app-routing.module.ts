@@ -21,15 +21,27 @@ const routes: Routes = [
   },
   {
     path: 'app',
-    loadChildren: () => import('./pages/app/app.module').then( m => m.AppPageModule)
+    loadChildren: () => import('./pages/app/app.module').then(m => m.AppPageModule)
   },
   {
     path: 'browser',
-    loadChildren: () => import('./pages/browser/browser.module').then( m => m.BrowserPageModule)
+    loadChildren: () => import('./pages/browser/browser.module').then(m => m.BrowserPageModule)
   },
   {
     path: 'iframe',
-    loadChildren: () => import('./pages/iframe/iframe.module').then( m => m.IframePageModule)
+    loadChildren: () => import('./pages/iframe/iframe.module').then(m => m.IframePageModule)
+  },
+  {
+    path: 'clipboard',
+    loadChildren: () => import('./pages/clipboard/clipboard.module').then(m => m.ClipboardPageModule)
+  },
+  {
+    path: 'file-system',
+    loadChildren: () => import('./pages/file-system/file-system.module').then(m => m.FileSystemPageModule)
+  },
+  {
+    path: 'filepath',
+    loadChildren: () => import('./pages/filepath/filepath.module').then(m => m.FilepathPageModule)
   },
   {
     path: '**',

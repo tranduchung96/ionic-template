@@ -1,4 +1,4 @@
-package io.ionic.starter;
+package com.hungtd.ionictemplate;
 
 import com.getcapacitor.BridgeActivity;
 

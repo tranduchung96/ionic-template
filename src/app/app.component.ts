@@ -14,21 +14,24 @@ export class AppComponent implements OnInit {
     { title: 'App', url: '/app', icon: 'apps' },
     { title: 'Browser', url: '/browser', icon: 'browsers' },
     { title: 'Iframe', url: '/iframe', icon: 'browsers' },
-
+    { title: 'Clipboard', url: '/clipboard', icon: 'copy' },
+    { title: 'File system', url: '/file-system', icon: 'copy' },
+    { title: 'File path', url: '/filepath', icon: 'copy' },
+    
   ];
   constructor(
     private platform: Platform,
     @Optional() private routerOutlet: IonRouterOutlet
   ) { }
   ngOnInit(): void {
-    this.platform.backButton.subscribeWithPriority(-1, () => {
-      if (!this.routerOutlet.canGoBack()) {
-        App.minimizeApp();
-      }
-    });
-    this.platform.backButton.subscribeWithPriority(10, () => {
-      console.log('Handler was called!');
-    });
+    // this.platform.backButton.subscribeWithPriority(-1, () => {
+    //   if (!this.routerOutlet.canGoBack()) {
+    //     App.minimizeApp();
+    //   }
+    // });
+    // this.platform.backButton.subscribeWithPriority(10, () => {
+    //   console.log('Handler was called!');
+    // });
   }
 
 

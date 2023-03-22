@@ -3,17 +3,12 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>iframe</ion-title>
+    <ion-title>filepath</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <iframe
-    #iframe
-    src="https://qng-delivery-dev.firebaseapp.com/"
-    width="100%"
-    height="100%"
-    frameborder="0"
-  >
-  </iframe>
+  <ion-button (click)="onClick()" expand="block" fill="clear" shape="round">
+    Click me
+  </ion-button>
 </ion-content>

@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Clipboard</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label>Input</ion-label>
+    <ion-input [(ngModel)]="input" placeholder="Type some text"></ion-input>
+    <ion-button (click)="copy()"> Copy </ion-button>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Paste area</ion-label>
+    <ion-textarea [(ngModel)]="output"></ion-textarea>
+    <ion-button (click)="paste()">
+      Paste
+    </ion-button>
+  </ion-item>
+</ion-content>
